@@ -4,6 +4,9 @@ Yet another UrbanDictionary API wrapper.
 
 AsyncUrban is a non-blocking library, using asyncio and aiohttp, which can be used to access UrbanDictionary data.
 
+## Installation
+Make sure you have Python3.6+ and run `py -3 -m pip install AsyncUrban` for Windows, or `python3 -m pip install AsyncUrban` for most other things.
+
 ## Examples
 ```py
 import asyncio
@@ -33,6 +36,8 @@ Orgasm
 >>> word_list[0].definition
 'A process for testing things'
 ```
+
+Docs coming soon maybe™
 
 ## Issues
 This is a very preliminary commit for testing purposes for now. If you have any issues, feel free to open one up.
