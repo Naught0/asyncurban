@@ -25,7 +25,7 @@ class UrbanDictionary:
                 else:
                     raise ConnectionError(f'UrbanDictionary API failed to respond\nStatus {r.status}')
 
-            if not resp:
+            if not resp['list']:
                 raise WordNotFoundError(f'Word "{term}", not found')
 
         else:
