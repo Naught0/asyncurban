@@ -10,7 +10,7 @@ from .word import Word
 class UrbanDictionary:
     def __init__(self, loop=None, session=None):
         self.loop = asyncio.get_event_loop() if loop is None else loop
-        self.session = aiohttp.ClientSession(loop=loop) if session is None else session
+        self.session = aiohttp.ClientSession(loop=self.loop) if session is None else session
         self.api_url = 'http://api.urbandictionary.com/v0/define'
         self.random_url = 'http://api.urbandictionary.com/v0/random'
         self.get_success_code = 200
