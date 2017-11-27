@@ -7,7 +7,7 @@ AsyncUrban is a non-blocking library, using asyncio and aiohttp, which can be us
 ## Examples
 ```py
 import asyncio
-from asyncurban import UrbanDictionary
+from asyncurban.urbandictionary import UrbanDictionary
 
 loop = asyncio.get_event_loop()
 urban = UrbanDictionary()
