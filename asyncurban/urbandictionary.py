@@ -3,8 +3,8 @@
 import asyncio
 import aiohttp
 
-from errors import *
-from word import Word
+from .errors import *
+from .word import Word
 
 
 class UrbanDictionary:

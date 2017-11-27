@@ -10,7 +10,7 @@ Make sure you have Python3.6+ and run `py -3 -m pip install AsyncUrban` for Wind
 ## Examples
 ```py
 import asyncio
-from asyncurban.urbandictionary import UrbanDictionary
+from AsyncUrban.urbandictionary import UrbanDictionary
 
 
 loop = asyncio.get_event_loop()
