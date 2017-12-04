@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name = 'AsyncUrban',
     packages = ['AsyncUrban'],
-    version = '0.1',
+    version = '0.1.2',
     description = 'An asynchronous wrapper around the UrbanDictionary API.',
     author = 'James E',
     author_email = 'naught0@github.com',
