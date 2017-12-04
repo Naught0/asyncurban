@@ -10,13 +10,13 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name = 'AsyncUrban',
     packages = ['AsyncUrban'],
-    version = '0.1.3',
+    version = '0.1.4',
     description = 'An asynchronous wrapper around the UrbanDictionary API.',
     long_description = long_description,
     author = 'James E',
     author_email = 'naught0@github.com',
     url = 'https://github.com/naught0/AsyncUrban',
-    download_url = 'https://github.com/Naught0/AsyncUrban/archive/0.1.3.tar.gz',
+    download_url = 'https://github.com/Naught0/AsyncUrban/archive/0.1.4.tar.gz',
     keywords = ('dictionary', 'urban', 'urbandictionary', 'define'),
     classifiers = [],
 )
