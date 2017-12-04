@@ -12,6 +12,7 @@ setup(
     packages = ['AsyncUrban'],
     version = '0.1.3',
     description = 'An asynchronous wrapper around the UrbanDictionary API.',
+    long_description = long_description,
     author = 'James E',
     author_email = 'naught0@github.com',
     url = 'https://github.com/naught0/AsyncUrban',
