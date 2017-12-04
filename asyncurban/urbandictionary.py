@@ -1,5 +1,3 @@
-#!/bin/env python3.6
-
 import asyncio
 import aiohttp
 

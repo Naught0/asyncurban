@@ -1,10 +1,8 @@
-#!/bin/env python3
-
 class AsyncUrbanException(Exception):
-	""" Base exception for the rest """
-	pass
+    """ Base exception for the rest """
+    pass
+
 
 class WordNotFoundError(Exception):
-	""" Raised when no results are found for a query """
-	pass
-	
+    """ Raised when no results are found for a query """
+    pass

@@ -1,5 +1,3 @@
-#!/bin/env python3
-
 class Word:
     def __init__(self, urban_dict: dict):
         self.defid = urban_dict['defid']
@@ -22,4 +20,3 @@ class Word:
 
     def __ne__(self, other):
         return not self.__eq__(other)
-        

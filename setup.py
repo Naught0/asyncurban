@@ -9,6 +9,6 @@ setup(
     author_email = 'naught0@github.com',
     url = 'https://github.com/naught0/AsyncUrban',
     download_url = 'https://github.com/Naught0/AsyncUrban/archive/0.1.tar.gz',
-    keywords = ['dictionary', 'urban', 'urbandictionary', 'define'],
+    keywords = ('dictionary', 'urban', 'urbandictionary', 'define'),
     classifiers = [],
 )
