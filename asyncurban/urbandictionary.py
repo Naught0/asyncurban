@@ -6,6 +6,7 @@ from .word import Word
 
 
 class UrbanDictionary:
+    """ A client which allows you to easily retrieve information from Urban Dictionary. """
     def __init__(self, loop=None, session=None):
         self.loop = asyncio.get_event_loop() if loop is None else loop
         self.session = aiohttp.ClientSession(loop=self.loop) if session is None else session
@@ -21,7 +22,7 @@ class UrbanDictionary:
                 if r.status == self.get_success_code:
                     resp = await r.json()
                 else:
-                    raise ConnectionError(f'UrbanDictionary API failed to respond\nStatus {r.status}')
+                    raise UrbanConnectionError(r.status)
 
             if not resp['list']:
                 raise WordNotFoundError(f'Word "{term}", not found')
