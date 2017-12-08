@@ -10,8 +10,8 @@ Installation
 ------------
 
 Make sure you have Python3.6+ and run
-``py -3 -m pip install AsyncUrban`` for Windows, or
-``python3 -m pip install AsyncUrban`` for most other things.
+``py -3 -m pip install asyncurban`` for Windows, or
+``python3 -m pip install asyncurban`` for most other things.
 
 Examples
 --------
