@@ -6,7 +6,9 @@ from .word import Word
 
 
 class UrbanDictionary:
-    """ A client which allows you to easily retrieve information from Urban Dictionary. """
+    """ A client which allows you to easily retrieve information from Urban Dictionary. 
+    
+    You may optionally pass an Aiohttp ClientSession and asyncio event loop """
     def __init__(self, loop=None, session=None):
         self.loop = asyncio.get_event_loop() if loop is None else loop
         self.session = aiohttp.ClientSession(loop=self.loop) if session is None else session
