@@ -13,14 +13,11 @@ class Word:
         self.votes = {'up': urban_dict['thumbs_up'], 'down': urban_dict['thumbs_down']}
         self.current_vote = urban_dict['current_vote'] # This seems to always be an empty string
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.word
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return '<Word word={0.word} defid={0.defid}>'.format(self)
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         return isinstance(other, Word) and other.defid == self.defid
-
-    def __ne__(self, other):
-        return not self.__eq__(other)
