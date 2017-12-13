@@ -1,6 +1,6 @@
 class Word:
     """ This is a basic data class which holds the UrbanDictionary API's
-    resposne to a GET request
+    response to a GET request
 
     It supports basic operations like str(), ==, and != """
     def __init__(self, urban_dict: dict):
