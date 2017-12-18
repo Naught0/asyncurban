@@ -18,14 +18,13 @@ Examples
 
 .. code:: py
 
-    import asyncio
-    from asyncurban import UrbanDictionary
-
-
-    loop = asyncio.get_event_loop()
+    >>> import asyncio
+    >>> from asyncurban import UrbanDictionary
+    >>> loop = asyncio.get_event_loop()
+    
     # session and loop are optional kwargs for your convenience if 
     # You already have them defined for your project
-    urban = UrbanDictionary(loop=loop)
+    >>> urban = UrbanDictionary(loop=loop)
 
     # Get a word definition
     >>> word = loop.run_until_complete(urban.get_word('dank'))
