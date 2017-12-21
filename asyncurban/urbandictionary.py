@@ -72,7 +72,7 @@ class UrbanDictionary:
                 raise UrbanConnectionError(response.status)
 
         if not response['list']:
-            raise WordNotFoundError(f'Word "{term}", not found')
+            raise WordNotFoundError(term)
 
         return response
 
