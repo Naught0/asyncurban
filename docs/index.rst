@@ -6,7 +6,7 @@
 Welcome to asyncurban's documentation!
 ======================================
 
-asyncurban is an asynchronous library which can be used to access UrbanDictionar word data easily. It provides a convenient layer of abstraction over the raw UrbanDictionary API.
+asyncurban is an asynchronous library which can be used to access UrbanDictionary word data easily. It provides a convenient layer of abstraction over the raw UrbanDictionary API.
 
 Installation
 ------------

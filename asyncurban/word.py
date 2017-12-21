@@ -12,7 +12,7 @@ class Word:
         ==========  =========================================
         ``x == y``      Checks if two Words are equal
         ``x != y``      Checks if two Words are not equal
-        ``str(x)``      Returns a string representation of a Word
+        ``str(x)``      Returns the string representation of a Word
         ==========  =========================================
 
     Attributes

@@ -93,7 +93,7 @@ class UrbanDictionary:
         return Word(resp['list'][0])
 
     async def search(self, term: str, limit: int = 3) -> List[Word]:
-        """Performs a for a term and returns a list of the specified length.
+        """Performs a search for a term and returns a list.
         
         Parameters
         ----------
@@ -101,7 +101,7 @@ class UrbanDictionary:
             The term to be defined.
             
         limit : int, optional
-            How many results are wanted.
+            Max amount of results returned.
 
         Note
         ----
