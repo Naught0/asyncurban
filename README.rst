@@ -1,6 +1,8 @@
 AsyncUrban
 ==========
 
+|docs| |pypi|
+
 Yet another UrbanDictionary API wrapper.
 
 AsyncUrban is a non-blocking library, using asyncio and aiohttp, which
@@ -9,9 +11,14 @@ can be used to access UrbanDictionary data.
 Installation
 ------------
 
-Make sure you have Python3.6+ and run
+Make sure you have Python3.5+ and run
 ``py -3 -m pip install asyncurban`` for Windows, or
 ``python3 -m pip install asyncurban`` for most other things.
+
+Documentation
+-------------
+
+You can find the docs at http://asyncurban.readthedocs.io/ and a brief example below.
 
 Examples
 --------
@@ -46,10 +53,14 @@ Examples
     >>> word_list[0].definition
     'A process for testing things'
 
-Docs coming soon maybe™
-
 Issues
 ------
 
-This is a very preliminary commit for testing purposes for now. If you
-have any issues, feel free to open one up.
+Feel free to open up an issue or submit a PR if you have trouble or see a way to improve the code.
+
+.. |docs| image:: https://readthedocs.org/projects/asyncurban/badge/?version=latest
+    :target: http://asyncurban.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. |pypi| image:: https://badge.fury.io/py/asyncurban.svg
+      :target: https://badge.fury.io/py/asyncurban
