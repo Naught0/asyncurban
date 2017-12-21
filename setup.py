@@ -6,7 +6,10 @@ with open('README.rst') as f:
 setup(
     name='asyncurban',
     packages=['asyncurban'],
-    use_scm_version=True,
+    use_scm_version={
+        'version_scheme': 'guess-next-dev',
+        'local_scheme': 'dirty-tag'
+    },
     setup_requires=['setuptools_scm'],
     license='MIT',
     description='An asynchronous wrapper around the UrbanDictionary API.',
