@@ -1,8 +1,7 @@
-"""
-"""
 import asyncio
-import aiohttp
 from typing import List
+
+import aiohttp
 
 from .errors import *
 from .word import Word
@@ -31,8 +30,8 @@ class UrbanDictionary:
     RANDOM_URL = 'http://api.urbandictionary.com/v0/random'
 
     def __init__(self, loop: asyncio.AbstractEventLoop = None, session: aiohttp.ClientSession = None):
-        self.loop = asyncio.get_event_loop() if loop is None else loop
-        self.session = aiohttp.ClientSession(loop=self.loop) if session is None else session
+        self.loop = loop or asyncio.get_event_loop()
+        self.session = session or aiohttp.ClientSession(loop=self.loop)
 
     async def _get(self, term: str = None, random: bool = False) -> dict:
         """Helper method to reduce some boilerplate with aiohttp 
@@ -76,8 +75,16 @@ class UrbanDictionary:
 
         return response
 
+    async def get_word_raw(self, term: str) -> dict:
+        """Gets the raw json response for a word"""
+        pass
+
+    async def search_raw(self, term: str, limit: int = 3) -> dict:
+        """Gets the raw json response for a search"""
+        pass
+
     async def get_word(self, term: str) -> Word:
-        """Gets the first definition of a word available.
+        """Gets the first matching word available.
         
         Parameters
         ----------
@@ -88,6 +95,14 @@ class UrbanDictionary:
         -------
         Word
             The closest matching Word object from UrbanDictionary.
+
+        Raises
+        ------
+        UrbanConnectionError
+            If the response status isn't 200.
+
+        WordNotFoundError
+            If the response doesn't contain data (i.e. no word found).
         """
         resp = await self._get(term=term)
         return Word(resp['list'][0])
@@ -111,6 +126,14 @@ class UrbanDictionary:
         -------
         List[Word]
             A list of Word objects of up to the specified length.
+
+        Raises
+        ------
+        UrbanConnectionError
+            If the response status isn't 200.
+
+        WordNotFoundError
+            If the response doesn't contain data (i.e. no word found).
         """
         resp = await self._get(term=term)
         words = resp['list']
