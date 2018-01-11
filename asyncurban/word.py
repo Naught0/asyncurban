@@ -63,7 +63,7 @@ class Word:
         return self.word
 
     def __repr__(self) -> str:
-        return '<Word word={0.word} defid={0.defid}>'.format(self)
+        return '<Word word={0.word!r} defid={0.defid!r}>'.format(self)
 
     def __eq__(self, other) -> bool:
         return isinstance(other, Word) and other.defid == self.defid
