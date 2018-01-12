@@ -35,12 +35,19 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
-    'sphinx_autodoc_typehints'
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.asyncio'
 ]
 
-napoleon_google_docstring = False
-napoleon_numpy_docstring = True
-napoleon_use_rtype = False
+autodoc_member_order = 'bysource'
+
+# No clickable images
+html_scaled_image_link = False
+
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3.6', None),
+    'aiohttp': ('https://aiohttp.readthedocs.io/en/stable/', None)
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

@@ -1,3 +1,4 @@
 asyncurban
 aiohttp
 sphinx_autodoc_typehints
+pillow
