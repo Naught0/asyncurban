@@ -17,9 +17,8 @@ setup(
     author='James E',
     author_email='naught0@github.com',
     url='https://github.com/naught0/asyncurban',
-    download_url='https://github.com/naught0/asyncurban/archive/0.1.9.tar.gz',
     keywords=('dictionary', 'urban', 'urbandictionary', 'define'),
-    install_requires=['aiohttp'],
+    install_requires=['aiohttp>=2.3.7'],
     python_requires='>=3.5',
     classifiers=[
         'Programming Language :: Python :: 3.6',
