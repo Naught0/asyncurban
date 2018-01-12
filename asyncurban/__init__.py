@@ -10,7 +10,7 @@ __license__ = 'MIT'
 
 try:
     __version__ = get_distribution(__title__).version 
-except DistributionNotFound:
-    __version__ = '0.0.0'
+except:
+    pass
 
 __all__ = ('UrbanDictionary', 'Word')
