@@ -12,13 +12,13 @@ class UrbanDictionary:
     
     Attributes:
         API_URL (str): The base URL for all search requests.
-        RANDOM_URL (str): The base URL for random word requests. 
-    
+        RANDOM_URL (str): The base URL for random word requests.
+
     Args:
-        loop (:class:`asyncio.AbstractEventLoop`, optional): The event loop in which the client runs. 
-            If one isn't provided, a loop is created.  
-        session (:class:`aiohttp.ClientSession`, optional): The session which makes all calls to the API. 
-            If one isn't provided, a session is created. 
+        loop (:class:`asyncio.AbstractEventLoop`, optional): The event loop in which the client runs.
+            If one isn't provided, a loop is created.
+        session (:class:`aiohttp.ClientSession`, optional): The session which makes all calls to the API.
+            If one isn't provided, a session is created.
     """
     API_URL = 'http://api.urbandictionary.com/v0/define'
     RANDOM_URL = 'http://api.urbandictionary.com/v0/random'
@@ -34,7 +34,7 @@ class UrbanDictionary:
         if session is None:
             self.session = aiohttp.ClientSession(loop=self.loop)
             self.session_provided = True
-        else:        
+        else:
             self.session = session
             self.session_provided = False
 
@@ -166,10 +166,3 @@ class UrbanDictionary:
             await self.session.close()
         if self.loop_provided:
             self.loop.close()
-
-    async def __aenter__(self):
-        return self
-
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
-        pass
-
