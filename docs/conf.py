@@ -64,7 +64,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'asyncurban'
-copyright = '2017, naught0'
+copyright = '2017-2018, naught0'
 author = 'naught0'
 
 # The version info for the project you're documenting, acts as replacement for

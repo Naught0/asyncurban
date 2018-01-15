@@ -1,25 +1,23 @@
-.. currentmodule:: asyncurban
-
 API Reference
 =============
 
 Client
 ------
 
-.. autoclass:: UrbanDictionary
+.. autoclass:: asyncurban.urbandictionary.UrbanDictionary
    :members:
 
 Return Data
 -----------
 
-.. autoclass:: Word
+.. autoclass:: asyncurban.word.Word
    :members:
 
 Exceptions
 ----------
 
-.. autoexception:: UrbanException
+.. autoexception:: asyncurban.errors.UrbanException
 
-.. autoexception:: WordNotFoundError
+.. autoexception:: asyncurban.errors.WordNotFoundError
 
-.. autoexception:: UrbanConnectionError
+.. autoexception:: asyncurban.errors.UrbanConnectionError

@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 class Word:
     """A data class representing a word from the UrbanDictionary API
     
@@ -48,7 +45,7 @@ class Word:
         self.definition = urban_dict['definition']
         self.examples = urban_dict['example']
         self.votes = {'up': urban_dict['thumbs_up'], 'down': urban_dict['thumbs_down']}
-        self.current_vote = urban_dict['current_vote'] # This seems to always be an empty string
+        self.current_vote = urban_dict['current_vote']  # This seems to always be an empty string
 
     def __str__(self) -> str:
         return self.word
