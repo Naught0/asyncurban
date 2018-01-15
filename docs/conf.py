@@ -46,7 +46,7 @@ autodoc_member_order = 'bysource'
 html_scaled_image_link = False
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.6', None),
+    'python': ('https://docs.python.org/3', None),
     'aiohttp': ('https://aiohttp.readthedocs.io/en/stable/', None)
 }
 
@@ -64,7 +64,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'asyncurban'
-copyright = '2017, naught0'
+copyright = '2017-2018, naught0'
 author = 'naught0'
 
 # The version info for the project you're documenting, acts as replacement for

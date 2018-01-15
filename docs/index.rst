@@ -7,7 +7,8 @@
   :width: 500px
   :align: center
 
-asyncurban is an asynchronous library which can be used to access UrbanDictionary word data easily. It provides a convenient layer of abstraction over the raw UrbanDictionary API.
+asyncurban is an asynchronous library which can be used to access UrbanDictionary word data
+easily. It provides a convenient layer of abstraction over the raw UrbanDictionary API.
 
 Installation
 ------------
@@ -18,7 +19,8 @@ You can obtain the stable version of the package via pip.
 
    $ python3 -m pip install -U asyncurban
 
-Otherwise, head over to https://github.com/naught0/asyncurban to check out the latest and greatest build.
+Otherwise, head over to https://github.com/naught0/asyncurban to check out the latest and greatest
+build.
 
 Getting Started
 ~~~~~~~~~~~~~~~
