@@ -75,7 +75,7 @@ author = 'naught0'
 from pkg_resources import get_distribution, DistributionNotFound
 
 try:
-    version = get_distribution('lolrune').version
+    version = get_distribution('asyncurban').version
 except DistributionNotFound:
     version = 'latest'
 # The full version, including alpha/beta/rc tags.

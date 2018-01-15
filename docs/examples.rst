@@ -1,4 +1,4 @@
-.. currentmodule:: lolrune
+.. currentmodule:: asyncurban
 
 .. _examples:
 
