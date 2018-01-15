@@ -46,7 +46,7 @@ autodoc_member_order = 'bysource'
 html_scaled_image_link = False
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.6', None),
+    'python': ('https://docs.python.org/3', None),
     'aiohttp': ('https://aiohttp.readthedocs.io/en/stable/', None)
 }
 
