@@ -1,10 +1,11 @@
 import asyncio
 from typing import List
 
+import asyncurban
 import aiohttp
 
-from .errors import *
-from .word import Word
+from asyncurban.errors import *
+from asyncurban.word import Word
 
 
 class UrbanDictionary:
@@ -42,11 +43,11 @@ class UrbanDictionary:
         """Helper method to reduce some boilerplate with :module:`aiohttp`.
         
         Args:
-            term (str, optional): The term to search for. Optional if doing a random search.
-            random (bool, optional): Whether the search should return a random word.
+            term: The term to search for. Optional if doing a random search.
+            random: Whether the search should return a random word.
         
         Returns:
-            :class:`dict`: A dict representation of the JSON response from the API.
+            The JSON response from the API.
         
         Raises:
             UrbanConnectionError: If the response status isn't ``200``.
@@ -70,14 +71,14 @@ class UrbanDictionary:
 
         return response
 
-    async def get_word(self, term: str) -> Word:
+    async def get_word(self, term: str) -> 'asyncurban.word.Word':
         """Gets the first matching word available.
         
         Args:
-            term (str): The word to be defined.
+            term: The word to be defined.
         
         Returns:
-            :class:`Word`: The closest matching :class:`Word` object from UrbanDictionary.
+            The closest matching :class:`Word` from UrbanDictionary.
         
         Raises:
             UrbanConnectionError: If the response status isn't ``200``.
@@ -90,16 +91,16 @@ class UrbanDictionary:
         """Performs a search for a term and returns a list of possible matching :class:`Word`\s.
         
         Args:
-            term (str): The term to be defined.
+            term: The term to be defined.
         
-            limit (int, optional): Max amount of results returned.
+            limit (optional): Max amount of results returned.
                 Defaults to 3.
         
         Note:
             The API will relay a fixed number of words and definitions, so ``limit`` can be arbitrarily high if needed or wanted. 
         
         Returns:
-            List[:class:`Word`]: A list of Word objects of up to the specified length.
+            A list of :class:`Word` objects of up to the specified length.
         
         Raises:
             UrbanConnectionError: If the response status isn't ``200``.
@@ -110,11 +111,11 @@ class UrbanDictionary:
         return [Word(x) for x in words[:limit]]
 
     async def get_random(self) -> Word:
-        """Gets a random :class:`Word`.
+        """Gets a random word.
         
         Returns:
-            :class:`Word`: A random Word object.
-                   
+            A random :class:`Word`\.
+        
         Raises:
             UrbanConnectionError: If the response status isn't ``200``.
         """
@@ -125,10 +126,10 @@ class UrbanDictionary:
         """Gets the raw json response for a word.
         
         Args:
-            term (str): The word to be defined.
+            term: The word to be defined.
         
         Returns:
-            :class:`dict`: The raw JSON response from the UrbanDictionary API for a particular word.
+            The JSON response from the UrbanDictionary API for ``term``.
         
         Raises:
             UrbanConnectionError: If the response status isn't ``200``. 
@@ -140,12 +141,13 @@ class UrbanDictionary:
         """Performs a search for a term and returns the raw response.
         
         Args:
-            term (str): The term to be defined.
-            limit (int, optional): The maximum amount of results you'd like.
+            term: The term to be defined.
+        
+            limit: The maximum amount of results you'd like.
                 Defaults to 3.
         
         Returns:
-            List[:class:`dict`]: A list of :class:`dict`\s which contain word / definition information.
+            A list of :class:`dict`\s which contain word information.
         """
         return (await self._get(term=term))['list'][:limit]
 
@@ -153,8 +155,8 @@ class UrbanDictionary:
         """Gets a random word in raw json format.
         
         Returns:
-            dict: The json representation of a random word as a :class:`dict`.
-
+            The json representation of a random word as a :class:`dict`.
+        
         Raises:
             UrbanConnectionError: If the response status isn't ``200``.
         """
