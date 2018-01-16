@@ -22,7 +22,7 @@ class Word:
     
         examples (str): User created examples of the word. Typically used in a sentence (or a few).
     
-        link (str): The link to the definition of the word.
+        permalink (str): The link to the definition of the word.
     
         votes (Dict[str, int]): A dict containing both the upvotes and downvotes for this word and definition pair.
     
