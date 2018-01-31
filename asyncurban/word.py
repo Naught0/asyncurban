@@ -20,7 +20,7 @@ class Word:
     
         definition (str): The definition of the word.
     
-        examples (str): User created examples of the word. Typically used in a sentence (or a few).
+        example (str): User created examples of the word. Typically used in a sentence (or a few).
     
         permalink (str): The link to the definition of the word.
     
@@ -43,7 +43,7 @@ class Word:
         self.author = urban_dict['author']
         self.permalink = urban_dict['permalink']
         self.definition = urban_dict['definition']
-        self.examples = urban_dict['example']
+        self.example = urban_dict['example']
         self.votes = {'up': urban_dict['thumbs_up'], 'down': urban_dict['thumbs_down']}
         self.current_vote = urban_dict['current_vote']  # This seems to always be an empty string
 
