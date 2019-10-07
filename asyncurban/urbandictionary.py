@@ -61,6 +61,7 @@ class UrbanDictionary:
                 response = await response.json()
             else:
                 raise UrbanConnectionError(response.status)
+        await self.session.close()
 
         if not response['list']:
             raise WordNotFoundError(term)
