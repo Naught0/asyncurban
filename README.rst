@@ -1,7 +1,7 @@
 AsyncUrban
 ==========
 
-|docs| |pypi|
+|docs| |pypi| |downloads|
 
 Yet another UrbanDictionary API wrapper.
 
@@ -64,3 +64,6 @@ Feel free to open up an issue or submit a PR if you have trouble or see a way to
 
 .. |pypi| image:: https://badge.fury.io/py/asyncurban.svg
       :target: https://badge.fury.io/py/asyncurban
+
+.. |downloads| image:: https://static.pepy.tech/personalized-badge/asyncurban?period=total&units=INTERNATIONAL_SYSTEM&left_color=GRAY&right_color=BRIGHTGREEN&left_text=downloads
+    :target: https://pepy.tech/projects/asyncurban
